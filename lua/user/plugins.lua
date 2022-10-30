@@ -93,9 +93,6 @@ return packer.startup(function(use)
     commit = "8e763332b7bf7b3a426fd8707b7f5aa85823a5ac",
   }
 
-  -- Trailing Whitespace
-  use {"bronson/vim-trailing-whitespace", commit = "907174052a504e60e9b915f5c083ee5f6e067080" }
-
   -- Git
   use { "lewis6991/gitsigns.nvim", commit = "f98c85e7c3d65a51f45863a34feb4849c82f240f" }
 
@@ -103,6 +100,16 @@ return packer.startup(function(use)
   use { "mfussenegger/nvim-dap", commit = "6b12294a57001d994022df8acbe2ef7327d30587" }
   use { "rcarriga/nvim-dap-ui", commit = "1cd4764221c91686dcf4d6b62d7a7b2d112e0b13" }
   use { "ravenxrz/DAPInstall.nvim", commit = "8798b4c36d33723e7bba6ed6e2c202f84bb300de" }
+
+  -- Trailing Whitespace
+  use { "bronson/vim-trailing-whitespace", commit = "907174052a504e60e9b915f5c083ee5f6e067080" }
+
+  -- Easy empty lines
+  use {
+    "nikitabugrovsky/nvim-easy-empty-lines",
+    commit = "9cb1cd73f7c53cff0373546b91d460925b60baaf",
+    run = ":EasyEmptyLinesHook"
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
